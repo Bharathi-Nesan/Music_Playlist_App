@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Music Playlist - Spotify Inspired
 
 A modern, fully-featured music player web application inspired by Spotify, built with React, React Router, and Tailwind CSS.
@@ -46,15 +45,25 @@ src/
     SongCard.jsx    # Song card component
     PlaylistCard.jsx # Playlist card component
     SearchBar.jsx   # Search input component
+    ErrorBoundary.jsx # Error boundary component
   pages/            # Page components
     Home.jsx        # Home page
     Search.jsx      # Search page
     Library.jsx     # Library page
     Playlist.jsx    # Playlist page
+    Login.jsx       # Login page
+    SignUp.jsx      # Sign up page
+    ErrorPage.jsx   # Error page
   context/          # Context API
+    AuthContext.jsx # Authentication context
     MusicContext.jsx # Global music state management
+  hooks/            # Custom hooks
+    useErrorHandler.js # Error handling hook
   data/             # Data files
     songsData.js    # Songs data and utilities
+  utils/            # Utility functions
+    errorHandler.js # Error handling utilities
+    vercelErrors.js # Vercel error constants
   styles/           # Styles
     index.css       # Global styles
 ```
@@ -152,7 +161,3 @@ This project is open source and available under the MIT License.
 - Design inspired by Spotify
 - Icons from Heroicons
 - Images from Unsplash
-
-=======
-# Music_Playlist_App
->>>>>>> 56aaa6bd40b9c93a4d6fc5f92bd44bd1aa980566

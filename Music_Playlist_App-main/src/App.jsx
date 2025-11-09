@@ -1,12 +1,7 @@
-<<<<<<< HEAD
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { AuthProvider, useAuth } from './context/AuthContext';
 import { MusicProvider } from './context/MusicContext';
 import ErrorBoundary from './components/ErrorBoundary';
-=======
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { MusicProvider } from './context/MusicContext';
->>>>>>> f45c808 (Describe your change)
 import Sidebar from './components/Sidebar';
 import MobileNav from './components/MobileNav';
 import PlayerBar from './components/PlayerBar';
@@ -14,7 +9,6 @@ import Home from './pages/Home';
 import Search from './pages/Search';
 import Library from './pages/Library';
 import Playlist from './pages/Playlist';
-<<<<<<< HEAD
 import Login from './pages/Login';
 import SignUp from './pages/SignUp';
 import ErrorPage from './pages/ErrorPage';
@@ -131,30 +125,7 @@ function App() {
         </Router>
       </AuthProvider>
     </ErrorBoundary>
-=======
-
-function App() {
-  return (
-    <MusicProvider>
-      <Router>
-        <div className="flex h-screen bg-spotify-black text-white overflow-hidden">
-          <Sidebar />
-          <main className="flex-1 md:ml-64 overflow-y-auto pb-36 md:pb-24">
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/search" element={<Search />} />
-              <Route path="/library" element={<Library />} />
-              <Route path="/playlist/:id" element={<Playlist />} />
-            </Routes>
-          </main>
-          <MobileNav />
-          <PlayerBar />
-        </div>
-      </Router>
-    </MusicProvider>
->>>>>>> f45c808 (Describe your change)
   );
 }
 
 export default App;
-
