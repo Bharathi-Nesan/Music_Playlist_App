@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { AuthProvider, useAuth } from './context/AuthContext';
 import { MusicProvider } from './context/MusicContext';
+import ErrorBoundary from './components/ErrorBoundary';
 import Sidebar from './components/Sidebar';
 import MobileNav from './components/MobileNav';
 import PlayerBar from './components/PlayerBar';
@@ -10,6 +11,7 @@ import Library from './pages/Library';
 import Playlist from './pages/Playlist';
 import Login from './pages/Login';
 import SignUp from './pages/SignUp';
+import ErrorPage from './pages/ErrorPage';
 
 const ProtectedLayout = ({ children }) => {
   return (
@@ -99,6 +101,12 @@ const AppRoutes = () => {
         }
       />
       
+      {/* Error Page */}
+      <Route 
+        path="/error" 
+        element={<ErrorPage />} 
+      />
+      
       {/* Catch all - redirect to login if not authenticated, home if authenticated */}
       <Route 
         path="*" 
@@ -110,11 +118,13 @@ const AppRoutes = () => {
 
 function App() {
   return (
-    <AuthProvider>
-      <Router>
-        <AppRoutes />
-      </Router>
-    </AuthProvider>
+    <ErrorBoundary showDetails={process.env.NODE_ENV === 'development'}>
+      <AuthProvider>
+        <Router>
+          <AppRoutes />
+        </Router>
+      </AuthProvider>
+    </ErrorBoundary>
   );
 }
 
