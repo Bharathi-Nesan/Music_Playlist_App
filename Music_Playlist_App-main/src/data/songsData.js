@@ -106,6 +106,15 @@ export const songsData = [
     duration: 212,
     image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=400&fit=crop",
     audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-12.mp3"
+  },
+  {
+    id: 13,
+    title: "Vaathi Coming",
+    artist: "Anirudh Ravichander",
+    album: "Master",
+    duration: 195,
+    image: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=400&h=400&fit=crop",
+    audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-13.mp3"
   }
 ];
 
